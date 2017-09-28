@@ -1,1 +1,109 @@
 https://github.com/caceresdaniel/CS3337-Exam
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git init
+Initialized empty Git repository in C:/Users/mattm_000/Desktop/CS3337-Exam/helloWorld/.git/
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ touch .gitignore
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ emacs .gitignore
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git add .
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git commit -m "first commit"
+[master (root-commit) 8778cae] first commit
+ 2 files changed, 15 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 src/helloWorld/helloWorld.java
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git remote add origin https://github.com/caceresdaniel/CS3337-Exam.git
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git push -u origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 550 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/caceresdaniel/CS3337-Exam.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git branch documentation
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (master)
+$ git checkout documentation
+Switched to branch 'documentation'
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ touch readme.txt
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ emacs readme.txt
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git add .
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git commit -m "created readme.txt"
+[documentation e5a7869] created readme.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git push origin documentation
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/caceresdaniel/CS3337-Exam.git
+ * [new branch]      documentation -> documentation
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ touch danielcaceresgitlog.txt
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ emacs danielcaceresgitlog.txt
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git log --oneline --graph --all
+* e5a7869 created readme.txt
+* 8778cae first commit
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git status
+On branch documentation
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        danielcaceresgitlog.txt
+        danielcaceresgitlog.txt~
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git add .
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git commit -m " added gitlog"
+[documentation 7a9b67c]  added gitlog
+ 2 files changed, 1 insertion(+)
+ create mode 100644 danielcaceresgitlog.txt
+ create mode 100644 danielcaceresgitlog.txt~
+
+mattm_000@goobs MINGW64 ~/Desktop/CS3337-Exam/helloWorld (documentation)
+$ git push origin documentation
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 433 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/caceresdaniel/CS3337-Exam.git
+   e5a7869..7a9b67c  documentation -> documentation
